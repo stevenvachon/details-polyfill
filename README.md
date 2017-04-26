@@ -1,4 +1,4 @@
-# details-polyill
+# details-polyfill [![BrowserStack Status][browserstack-image]][travis-url]
 
 > Polyfill for the HTML5 `<details>` element, no dependencies
 
@@ -109,5 +109,7 @@ Authored and maintained by Rico Sta. Cruz with help from contributors ([list][co
 > GitHub [@rstacruz](https://github.com/rstacruz) &nbsp;&middot;&nbsp;
 > Twitter [@rstacruz](https://twitter.com/rstacruz)
 
-[MIT]: http://mit-license.org/
+[browserstack-image]: https://www.browserstack.com/automate/badge.svg?badge_key=ZXVYc2ZQSUpPclZsc0dYOG42WVpOY29wT1plNFpoMGhxcGwrQ2dVTlJpZz0tLTcyOWJuMGpleVltTmljVHRqeFFsZEE9PQ==--42a4258eb3d03077d9dafb4f9a921f42c43619fc
 [contributors]: http://github.com/rstacruz/details-polyfill/contributors
+[MIT]: http://mit-license.org/
+[travis-url]: https://travis-ci.org/stevenvachon/details-polyfill
