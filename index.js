@@ -29,6 +29,9 @@ void (function (root, factory) {
         var details = e.target.parentNode
         if (!details) return
 
+        var cancelled = !dispatchToggleEvent(details)
+        if (cancelled) return
+
         if (details.getAttribute('open')) {
           details.open = false
           details.removeAttribute('open')
@@ -57,6 +60,21 @@ void (function (root, factory) {
 
       document.body.removeChild(el)
       return result
+    }
+
+    /*
+     * Dispatch 'toggle' event
+     */
+
+    function dispatchToggleEvent (details) {
+      var toggleEvent
+      try {
+        toggleEvent = new CustomEvent('toggle', { bubbles: true, canceable: true })
+      } catch(e) {
+        toggleEvent = document.createEvent('CustomEvent')
+        toggleEvent.initCustomEvent('toggle', true, true, null)
+      }
+      return details.dispatchEvent(toggleEvent)
     }
 
     /*
