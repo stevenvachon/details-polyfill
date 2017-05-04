@@ -7,17 +7,24 @@
   "repository": "rstacruz/details-polyfill",
   "devDependencies": {
     "chai": "^3.5.0",
-    "electron": "^1.6.6",
     "dotenv": "^4.0.0",
-    "mocha": "^3.3.0",
-    "phantomjs-prebuilt": "^2.1.14",
-    "shortid": "^2.2.8",
-    "testee": "stevenvachon/testee#launchpad-trunk"
+    "karma": "^1.7.0",
+    "karma-browserstack-launcher": "^1.2.0",
+    "karma-chai": "~0.1.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-detect-browsers": "^2.2.5",
+    "karma-edge-launcher": "~0.4.1",
+    "karma-firefox-launcher": "^1.0.1",
+    "karma-ie-launcher": "^1.0.0",
+    "karma-mocha": "^1.3.0",
+    "karma-opera-launcher": "^1.0.0",
+    "karma-safari-launcher": "^1.0.0",
+    "karma-spec-reporter": "~0.0.31",
+    "mocha": "^3.3.0"
   },
   "scripts": {
-    "ci": "testee test.html --reporter=spec --config=browserstack.js",
-    "test": "testee test.html --browsers=electron --reporter=spec",
-    "test-all": "testee test.html --browsers=chrome,edge,firefox,ie,safari"
+    "ci": "karma start karma-browserstack.conf.js",
+    "test": "karma start karma-local.conf.js"
   },
   "files": ["index.js"],
   "keywords": [

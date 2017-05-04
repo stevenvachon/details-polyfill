@@ -1,19 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<meta charset='utf-8'>
-<title>details-polyfill</title>
-<script src='index.js'></script>
-<script src='node_modules/chai/chai.js'></script>
-<script src='node_modules/mocha/mocha.js'></script>
-<script>mocha.setup('bdd'); expect=chai.expect</script>
-<link rel='stylesheet' href='node_modules/mocha/mocha.css'>
-</head>
-<body onload='mocha.run()'>
-<div id='mocha'></div>
-<script>(function(){
-
 // The elements for each test
+'use strict'
 var content,details,summary,testArea
 
 before( function() {
@@ -41,9 +27,6 @@ after( function() {
 })
 
 it('expands when collapsed', function(done) {
+	expect(true).to.be.true
 	done( /*new Error('asdf')*/ )
 })
-
-})()</script>
-</body>
-</html>
